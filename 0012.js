@@ -11,13 +11,15 @@ while (factors < 501) {
 document.getElementById('answer').innerHTML = "Answer: " + triNum;
 
 function getNumberOfFactors(num) {
-  //if (num < 2)
-    //return 1;
+  if (num < 2)
+    return 1;
 
   var numberOfFactors = 2;
-  for (var i = 2; i < num; i++)
+  var sqrt = Math.pow(num, .5); //Checks all the factors in half of the time
+
+  for (var i = 2; i < sqrt; i++)
     if (num % i == 0)
-      numberOfFactors++;
+      numberOfFactors += 2;
   return numberOfFactors;
 }
 
