@@ -9,9 +9,12 @@ var cSqr;
 while (c > b) {
   bSqr = pow(b, 2);
   cSqr = pow(c, 2);
+  a = 1;
   while (b > a) {
     sum = pow(a, 2) + bSqr;
-    if (sum >)
+    if (sum > cSqr) {
+      a++
+    }
   }
 }
 
