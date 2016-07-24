@@ -17,9 +17,12 @@ function getNumberOfFactors(num) {
   var numberOfFactors = 2;
   var sqrt = Math.pow(num, .5); //Checks all the factors in half of the time
 
-  for (var i = 2; i < sqrt; i++)
+  for (var i = 2; i <= sqrt; i++)
     if (num % i == 0)
-      numberOfFactors += 2;
+      if(i < sqrt)
+        numberOfFactors += 2;
+      else
+        numberOfFactors++;
   return numberOfFactors;
 }
 
